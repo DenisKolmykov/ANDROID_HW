@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">android hw01</string>
+    <string name="testText">Text for main text:</string>
+</resources>
