@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_album_cover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="16:9"
+        android:layout_margin="16dp"
+        android:src="@drawable/nirvana2">
+    </ImageView>
+
+    <ImageButton
+        android:id="@+id/play_button"
+        android:background="@null"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_album_cover"
+        android:src="@drawable/play_circle_24px">
+    </ImageButton>
+
+
+    <ImageButton
+        android:id="@+id/play_skip_next"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:src="@drawable/skip_next_24px"
+        app:layout_constraintTop_toTopOf="@+id/play_button"
+        app:layout_constraintBottom_toBottomOf="@+id/play_button"
+        app:layout_constraintLeft_toRightOf="@+id/play_button"
+        android:layout_marginLeft="16dp">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/play_skip_prev"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:src="@drawable/skip_previous_24px"
+        app:layout_constraintBottom_toBottomOf="@+id/play_button"
+        app:layout_constraintRight_toLeftOf="@+id/play_button"
+        app:layout_constraintTop_toTopOf="@+id/play_button"
+        android:layout_marginRight="16dp">
+    </ImageButton>
+
+
+    <TextView
+        android:id="@+id/singer_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:text="Исполнитель"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_button">
+    </TextView>
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_margin="16sp"
+        android:text="Наименование композиции"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singer_name">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
