@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="UseSwitchCompatOrMaterialXml">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ilon"
+        android:contentDescription="@string/avatar">
+    </ImageView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Имя"
+        android:textColorHint="@color/violet"
+        app:boxStrokeColor="@color/violet"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:counterEnabled="true"
+        app:counterMaxLength="40"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/cancel_button">
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:autofillHints="Имя"
+            android:textColorHint="@color/violet"
+            android:textSize="24sp"
+            android:inputType="textPersonName"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Телефон"
+        android:textColorHint="@color/dark_grey"
+        app:boxBackgroundColor="@color/light_violet"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
+        app:boxStrokeWidth="2dp"
+        app:boxCornerRadiusTopStart="4dp"
+        app:boxCornerRadiusTopEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputName">
+
+        <EditText
+            android:id="@+id/inputPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="Телефон"
+            android:inputType="phone"
+            android:maxLength="40"
+            android:textSize="24sp"
+            android:textColorHint="@color/dark_grey"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пол"
+        android:textAppearance="@style/MyStyleForText"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberInput">
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/MyStyleForText"
+        app:layout_constraintTop_toBottomOf="@+id/sex">
+
+        <RadioButton
+            android:id="@+id/radioM"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="M">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioF"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Ж">
+        </RadioButton>
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switchId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="start"
+        android:text="Получать уведомления"
+        android:textAppearance="@style/MyStyleForText"
+        android:checked="false">
+    </Switch>
+
+    <CheckBox
+        android:id="@+id/checkboxOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:checked="false"
+        android:clickable="false"
+        android:text="Об авторизации на устройстве"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchId" />
+
+    <CheckBox
+        android:id="@+id/checkboxTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="О новинках и предложениях"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxOne"
+        android:checked="false"
+        android:clickable="false"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/MyStyleForText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxTwo"
+        android:layout_margin="16dp"
+        android:text="Баллы" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/MyStyleForPoints"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxTwo"
+        android:layout_margin="16dp"
+        android:text="44/100" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/points" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Сохранить"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        tools:layout_editor_absoluteX="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

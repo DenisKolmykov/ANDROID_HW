@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyStyleForText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MyStyleForPoints" parent="MyStyleForText">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="MyCheckboxStyle" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/turquoise</item>
+        <item name="android:textColor">@color/black</item>-->
+        <item name="android:textSize">16sp</item>
+    </style>
+
+<!--    <style name="MyButtonStyle"> parent "Widget.Material3.CompoundButton.CheckBox"-->
+<!--        <item name="buttonTint">@color/violet</item>-->
+<!--    </style>-->
+
+
+</resources>

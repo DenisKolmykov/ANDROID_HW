@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Android_hw04" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- Стиль чекбокса -->
+        <item name="checkboxStyle">@style/MyCheckboxStyle</item>
+<!--        <item name="android:clickable">@style/CheckBoxStyle_clickable_false</item>-->
+
+<!--        &lt;!&ndash;  Стиль кнопки &ndash;&gt;-->
+<!--        <item name="android:buttonBarStyle">@style/MyButtonStyle</item>-->
+    </style>
+
+
+    <style name="Theme.Android_hw04" parent="Base.Theme.Android_hw04" >
+
+    </style>
+
+
+</resources>
