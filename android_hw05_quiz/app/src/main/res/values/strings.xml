@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QUIZ: MyCountry</string>
+    <string name="first_answer">первый вариант ответа</string>
+    <string name="second_answer">второй вариант ответа</string>
+    <string name="third_answer">третий вариант ответа</string>
+    <string name="fourth_answer">четвертый вариант ответа</string>
+    <string name="answer_button">ОТВЕТИТЬ</string>
+    <string name="start_button">НАЧАТЬ</string>
+</resources>
