@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StartScreen">
+
+    <fragment
+        android:id="@+id/StartScreen"
+        android:name="com.example.android_hw05_quiz.navigation.StartScreen"
+        tools:layout="@layout/fragment_start_screen"
+        android:label="@string/first_fragment_label">
+
+        <action
+            android:id="@+id/action_StartScreen_to_QuizScreen"
+            app:destination="@+id/QuizScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/QuizScreen"
+        android:name="com.example.android_hw05_quiz.navigation.QuizScreen"
+        tools:layout="@layout/fragment_quiz_screen"
+        android:label="@string/second_fragment_label">
+
+        <action
+            android:id="@+id/action_QuizScreen_to_ResultScreen"
+            app:destination="@id/ResultScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ResultScreen"
+        android:name="com.example.android_hw05_quiz.navigation.ResultScreen"
+        tools:layout="@layout/fragment_result_screen"
+        android:label="@string/third_fragment_label">
+
+        <action
+            android:id="@+id/action_ResultScreen_to_StartScreen"
+            app:destination="@id/StartScreen" />
+    </fragment>
+
+</navigation>
