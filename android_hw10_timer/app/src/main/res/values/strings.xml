@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">android_hw10_timer</string>
+    <string name="countdown_timer_text">Countdown Timer</string>
+    <string name="start_button_text">START</string>
+</resources>

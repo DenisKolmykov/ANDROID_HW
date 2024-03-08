@@ -16,6 +16,17 @@ import kotlin.random.Random
 
 
 class MainActivity : AppCompatActivity() {
+    var personName= ""
+    var personPhoneNum = ""
+    var personSex = ""
+    var personGetMessAuthoris = false
+    var personGetMessNews = false
+    var personPoints = 0
+    val switch = findViewById<Switch>(R.id.switchId)
+    val checkBoxOne = findViewById<CheckBox>(R.id.checkboxOne)
+    val checkBoxTwo = findViewById<CheckBox>(R.id.checkboxTwo)
+    val inputPersonName =  findViewById<EditText>(R.id.inputName)
+
     @SuppressLint("SetTextI18n", "MissingInflatedId", "UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,18 +35,8 @@ class MainActivity : AppCompatActivity() {
         val buttonSave = findViewById<Button>(R.id.buttonSave)
         buttonSave.isEnabled = false
 
-        var personName= ""
-        var personPhoneNum = ""
-        var personSex = ""
-        var personGetMessAuthoris = false
-        var personGetMessNews = false
-        var personPoints = 0
-        val switch = findViewById<Switch>(R.id.switchId)
-        val checkBoxOne = findViewById<CheckBox>(R.id.checkboxOne)
-        val checkBoxTwo = findViewById<CheckBox>(R.id.checkboxTwo)
 
         // слушаем на изменения поле ввода ИМЕНИ
-        val inputPersonName =  findViewById<EditText>(R.id.inputName)
         inputPersonName.addTextChangedListener {
             personName = inputPersonName.text.toString()
             checkInputData (
@@ -48,7 +49,8 @@ class MainActivity : AppCompatActivity() {
                 buttonSave)
         }
         //слушаем кнопку удаления текста в форме ввода Имени
-        findViewById<com.google.android.material.textfield.TextInputLayout>(R.id.textInputName).setEndIconOnClickListener {
+        val delTexyButton = findViewById<com.google.android.material.textfield.TextInputLayout>(R.id.textInputName)
+        delTexyButton.setEndIconOnClickListener {
             inputPersonName.text.clear()
             personName = ""
             checkInputData (
