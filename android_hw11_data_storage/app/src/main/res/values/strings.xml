@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">android_hw11_data_storage</string>
+    <string name="input_text_hint">Введите текст для сохранения</string>
+    <string name="save_button_text">СОХРАНИТЬ</string>
+    <string name="erase_button_text">ОЧИСТИТЬ</string>
+    <string name="output_saved_text_hint">saved text</string>
+    <string name="saved_text_title">Сохраненные данные:</string>
+
+</resources>
