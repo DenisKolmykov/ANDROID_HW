@@ -3,7 +3,6 @@ package com.example.android_hw11_data_storage
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.io.IOException
