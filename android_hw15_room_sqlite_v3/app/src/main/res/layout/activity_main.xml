@@ -6,25 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <TextView
-        android:id="@+id/text_dict"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Слов в словаре:"
-        android:textSize="26sp"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <TextView
-        android:id="@+id/dict_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="26dp"
-        android:fontFamily="cursive"
-        android:text="123"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toEndOf="@+id/text_dict"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -35,7 +16,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_dict">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_input"
@@ -46,22 +27,13 @@
 
 
     <Button
-        android:id="@+id/button_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Найти"
-        android:textSize="20sp"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"/>
-    <Button
         android:id="@+id/button_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+ в словарь"
         android:textSize="20sp"
         android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"/>
 
     <TextView
@@ -70,20 +42,21 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:textSize="26sp"
-        android:text="Найдено совпадений:"
+        android:text="первых слов в словаре:"
+        app:layout_constraintStart_toEndOf="@+id/dict_counter"
+        app:layout_constraintTop_toBottomOf="@+id/button_add"/>
+    <TextView
+        android:id="@+id/dict_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26dp"
+        android:fontFamily="cursive"
+        android:text="123"
+        android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_add"/>
 
-    <TextView
-        android:id="@+id/search_counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textSize="26sp"
-        android:fontFamily="cursive"
-        android:text="123:"
-        app:layout_constraintStart_toEndOf="@+id/title_search"
-        app:layout_constraintTop_toBottomOf="@+id/button_add"/>
+
 
     <ScrollView
         android:id="@+id/scroll"

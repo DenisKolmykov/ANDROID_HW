@@ -35,14 +35,18 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.buttonAdd.setOnClickListener { viewModel.onAddBtn(searchWord) }
+        binding.buttonDelete.setOnClickListener { viewModel.onDeleteBtn() }
 
-        lifecycleScope.launchWhenCreated {
+
+        lifecycleScope.launchWhenStarted {
             viewModel.allWords
                 .collect() { words ->
                     binding.searchData
                         .text = words.joinToString(
                         separator = "\r\n"
                     )
+                    binding.dictCounter
+                        .text = words.size.toString()
                 }
         }
 

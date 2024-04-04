@@ -9,10 +9,16 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
         INSTANCE = this
+//        db = Room
+//            .inMemoryDatabaseBuilder(
+//            applicationContext,
+//                DictDatabase::class.java
+//            )
         db = Room
-            .inMemoryDatabaseBuilder(
-            applicationContext,
-                DictDatabase::class.java
+            .databaseBuilder(
+                applicationContext,
+                DictDatabase::class.java,
+                "db"
             )
             .build()
     }
